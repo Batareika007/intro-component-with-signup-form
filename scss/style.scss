@@ -1,0 +1,150 @@
+@import 'normalize';
+@import 'colors';
+
+/* hide scroll bar if needed */
+
+.hide-scroll {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* remove 'X' from input box to clear the text*/
+
+input::-ms-clear {
+    display: none;
+}
+
+
+/* remove arrow from select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* text-indent: 1px; */
+    /* text-overflow: ''; */
+}
+
+/** ============ start  custom style ============ */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: $white_color;
+    background-color: $red_clr;
+    background-image: url(../images/bg-intro-desktop.png);
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 5vw auto ;
+    padding: 0 1rem;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem
+}
+
+section {
+   flex: 0 1 600px;
+
+    * {
+        border-radius: 1rem;
+    }
+}
+
+.blue__header {
+    text-align: center;
+    font-weight: 400;
+    background-color: $btn_color_bg;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+
+.form {
+    // border-radius: 0.5rem;
+    padding: 3rem;
+    background-color: $white_color;
+
+    &__footer {
+        color: $passive_clr;
+
+        a {
+            color: $red_clr;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+}
+
+form {
+    *{
+        margin-bottom: 1rem;
+    }
+    input {
+        width: 100%;
+        border: 1px solid $passive_clr;
+        padding: 1rem;
+        line-height: 150%;
+
+        &::placeholder {
+            color: $passive_clr;
+        }
+    }
+
+    & button {
+        width: 100%;
+        padding: 1rem;
+        background-color: $submit_btn_clr;
+        color: $white_color;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width:1440px) {}
+@media screen and (max-width:1024px) {
+    h1, p{
+        text-align: center;
+        line-height: 2.5rem;
+    }
+    .blue__header{
+        line-height: 150%;
+        padding: 1.5rem 1.5rem;
+        font-size: 16px;
+    }
+    .form{
+        padding: 2rem 1rem;
+        &__footer{
+            text-align: center;
+            font-size: 0.7rem;
+        }
+    }
+
+}
+@media screen and (max-width:768px) {}
+@media screen and (max-width:425px) {}
+@media screen and (max-width:375px) {}
+@media screen and (max-width:320px) {}
