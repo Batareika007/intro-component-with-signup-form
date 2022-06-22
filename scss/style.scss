@@ -54,11 +54,11 @@ body {
 .container {
     max-width: 1440px;
     width: 100%;
-    margin: 5vw auto ;
+    margin: 5vw auto;
     padding: 0 1rem;
 }
 
-main{
+main {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -66,30 +66,56 @@ main{
     gap: 2rem
 }
 
+
+
 section {
-   flex: 0 1 600px;
+    flex: 0 1 560px;
 
     * {
-        border-radius: 1rem;
+        border-radius: 8px;
     }
 }
 
+
+h1 {
+    font-size: 51px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+}
+
+p {
+    line-height: 162%;
+    letter-spacing: 0.015em;
+}
+
 .blue__header {
+    position: relative;
+    top: 0;
     text-align: center;
     font-weight: 400;
     background-color: $btn_color_bg;
     padding: 2rem;
     margin-bottom: 2rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+
+    &:hover {
+        position: relative;
+        top: 4px;
+        box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15);
+    }
 }
 
 .form {
-    // border-radius: 0.5rem;
-    padding: 3rem;
+    padding: 40px;
     background-color: $white_color;
 
     &__footer {
+        text-align: center;
         color: $passive_clr;
+        font-size: 11px;
 
         a {
             color: $red_clr;
@@ -100,51 +126,119 @@ section {
 }
 
 form {
-    *{
-        margin-bottom: 1rem;
+    position: relative;
+
+    * {
+        // margin-bottom: 20px;
+        height: 55px;
     }
+
     input {
         width: 100%;
-        border: 1px solid $passive_clr;
-        padding: 1rem;
-        line-height: 150%;
+        border: 2px solid $passive_clr;
+        padding: 32px;
+        // line-height: 150%;
+        font-weight: 500;
+        // margin-bottom: 0;
 
         &::placeholder {
             color: $passive_clr;
         }
+
+        &:focus {
+            border: 2px solid $active_clr ;
+            outline: none;
+        }
+
+        &:-webkit-autofill {
+            transition: background-color 5000s ease-in-out 0s;
+        }
     }
 
     & button {
+        position: relative;
+        top: 0;
         width: 100%;
-        padding: 1rem;
+        // padding: 1rem;
         background-color: $submit_btn_clr;
         color: $white_color;
         text-transform: uppercase;
         font-weight: 600;
+        box-shadow: 0px 8px 0px #42BC87;
+        transition: all 0.3s;
+        cursor: pointer;
+
+
+
+        &:hover {
+            background-color: #77E2B4;
+            position: relative;
+            top: 2px;
+            box-shadow: 0px 6px 0px #6BCCA1;
+        }
+
+        &:active {
+            position: relative;
+            top: 6px;
+            box-shadow: 0 2px 0 #6BCCA1;
+        }
+
+        &:focus {
+            border: 2px solid #014627;
+            box-shadow: none;
+        }
+
     }
 }
 
+.form__inp {
+    // width: 100%;
+    position: relative;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.form_error {
+    width: 24px;
+    height: 24px;
+    background-color: $red_clr;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 @media screen and (max-width:1440px) {}
+
 @media screen and (max-width:1024px) {
-    h1, p{
+
+    h1,
+    p {
         text-align: center;
         line-height: 2.5rem;
     }
-    .blue__header{
+
+    .blue__header {
         line-height: 150%;
         padding: 1.5rem 1.5rem;
         font-size: 16px;
     }
-    .form{
+
+    .form {
         padding: 2rem 1rem;
-        &__footer{
+
+        &__footer {
             text-align: center;
             font-size: 0.7rem;
         }
     }
 
 }
+
 @media screen and (max-width:768px) {}
+
 @media screen and (max-width:425px) {}
+
 @media screen and (max-width:375px) {}
+
 @media screen and (max-width:320px) {}
