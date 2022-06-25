@@ -54,8 +54,8 @@ body {
 .container {
     max-width: 1440px;
     width: 100%;
-    margin: 5vw auto;
-    padding: 0 1rem;
+    margin: 2vw auto;
+    padding: 0 24px;
 }
 
 main {
@@ -95,11 +95,12 @@ p {
     text-align: center;
     font-weight: 400;
     background-color: $btn_color_bg;
-    padding: 2rem;
     margin-bottom: 2rem;
     font-size: 1rem;
     box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
     transition: all 0.3s;
+    padding: 20px 15%;
+    line-height: 150%;
 
     &:hover {
         position: relative;
@@ -111,7 +112,7 @@ p {
 .form {
     padding: 40px;
     background-color: $white_color;
-
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
     &__footer {
         text-align: center;
         color: $passive_clr;
@@ -196,59 +197,66 @@ form {
 
 }
 
-.error__sign:after {
-    position: absolute;
-    content: '!';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    width: 24px;
-    height: 24px;
-    background-color: $red_clr;
-    border-radius: 50%;
-    top: 20px;
-    right: 20px;
+.error__sign {
+    position: relative;
+    input{
+        border: solid 2px $red_clr;
+    }
+    &:after{
+        position: absolute;
+        content: '!';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        width: 24px;
+        height: 24px;
+        background-color: $red_clr;
+        border-radius: 50%;
+        top: 20px;
+        right: 20px;
+    }
 }
 
-// .form__error-icon {
-//     width: 24px;
-//     height: 24px;
-//     background-color: $red_clr;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 20px;
-//     right: 20px;
-// }
 
 .form__error-text {
     color: $red_clr;
     height: auto;
     margin-top: 0.5rem;
+    text-align: right;
+    font-style: italic;
+    font-weight: 500;
+    padding-right: 5px;
 }
 
 @media screen and (max-width:1440px) {}
 
 @media screen and (max-width:1024px) {
 
-    h1,
+    h1{
+        max-width: 250px;
+        font-size: 28px;
+        line-height: 129%;
+        margin: 1rem auto;
+    }
     p {
+        max-width: 330px;
+        margin: 0 auto;
         text-align: center;
-        line-height: 2.5rem;
+        font-size: 1rem;
+        line-height: 162%
     }
 
-    .blue__header {
-        line-height: 150%;
-        padding: 1.5rem 1.5rem;
-        font-size: 16px;
-    }
+   
 
     .form {
-        padding: 2rem 1rem;
+        padding: 24px;
 
         &__footer {
+            padding: 0 7%;
             text-align: center;
             font-size: 0.7rem;
+            line-height: 160%;
         }
     }
 

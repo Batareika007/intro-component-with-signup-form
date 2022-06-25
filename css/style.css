@@ -417,8 +417,8 @@ body {
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: 5vw auto;
-  padding: 0 1rem;
+  margin: 2vw auto;
+  padding: 0 24px;
 }
 
 main {
@@ -463,13 +463,14 @@ p {
   text-align: center;
   font-weight: 400;
   background-color: hsl(248deg, 32%, 49%);
-  padding: 2rem;
   margin-bottom: 2rem;
   font-size: 1rem;
   -webkit-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  padding: 20px 15%;
+  line-height: 150%;
 }
 .blue__header:hover {
   position: relative;
@@ -481,6 +482,8 @@ p {
 .form {
   padding: 40px;
   background-color: white;
+  -webkit-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
 }
 .form__footer {
   text-align: center;
@@ -562,6 +565,12 @@ form button:active {
   margin-bottom: 20px;
 }
 
+.error__sign {
+  position: relative;
+}
+.error__sign input {
+  border: solid 2px hsl(0deg, 100%, 74%);
+}
 .error__sign:after {
   position: absolute;
   content: "!";
@@ -587,26 +596,35 @@ form button:active {
   color: hsl(0deg, 100%, 74%);
   height: auto;
   margin-top: 0.5rem;
+  text-align: right;
+  font-style: italic;
+  font-weight: 500;
+  padding-right: 5px;
 }
 
 @media screen and (max-width: 1024px) {
-  h1,
-p {
-    text-align: center;
-    line-height: 2.5rem;
+  h1 {
+    max-width: 250px;
+    font-size: 28px;
+    line-height: 129%;
+    margin: 1rem auto;
   }
 
-  .blue__header {
-    line-height: 150%;
-    padding: 1.5rem 1.5rem;
-    font-size: 16px;
+  p {
+    max-width: 330px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 162%;
   }
 
   .form {
-    padding: 2rem 1rem;
+    padding: 24px;
   }
   .form__footer {
+    padding: 0 7%;
     text-align: center;
     font-size: 0.7rem;
+    line-height: 160%;
   }
 }
