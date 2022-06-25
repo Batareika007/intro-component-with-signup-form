@@ -153,6 +153,8 @@ form {
         &:-webkit-autofill {
             transition: background-color 5000s ease-in-out 0s;
         }
+
+
     }
 
     & button {
@@ -183,11 +185,6 @@ form {
             box-shadow: 0 2px 0 #6BCCA1;
         }
 
-        &:focus {
-            border: 2px solid #014627;
-            box-shadow: none;
-        }
-
     }
 }
 
@@ -196,16 +193,38 @@ form {
     position: relative;
     height: auto;
     margin-bottom: 20px;
+
 }
 
-.form_error {
+.error__sign:after {
+    position: absolute;
+    content: '!';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
     width: 24px;
     height: 24px;
     background-color: $red_clr;
     border-radius: 50%;
-    position: absolute;
     top: 20px;
     right: 20px;
+}
+
+// .form__error-icon {
+//     width: 24px;
+//     height: 24px;
+//     background-color: $red_clr;
+//     border-radius: 50%;
+//     position: absolute;
+//     top: 20px;
+//     right: 20px;
+// }
+
+.form__error-text {
+    color: $red_clr;
+    height: auto;
+    margin-top: 0.5rem;
 }
 
 @media screen and (max-width:1440px) {}
