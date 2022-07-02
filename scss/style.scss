@@ -113,6 +113,7 @@ p {
     padding: 40px;
     background-color: $white_color;
     box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+
     &__footer {
         text-align: center;
         color: $passive_clr;
@@ -147,7 +148,7 @@ form {
         }
 
         &:focus {
-            border: 2px solid $active_clr ;
+            border: 2px solid $active_clr;
             outline: none;
         }
 
@@ -176,8 +177,6 @@ form {
         &:hover {
             background-color: #77E2B4;
             position: relative;
-            top: 2px;
-            box-shadow: 0px 6px 0px #6BCCA1;
         }
 
         &:active {
@@ -199,10 +198,12 @@ form {
 
 .error__sign {
     position: relative;
-    input{
+
+    input {
         border: solid 2px $red_clr;
     }
-    &:after{
+
+    &:after {
         position: absolute;
         content: '!';
         display: flex;
@@ -233,12 +234,13 @@ form {
 
 @media screen and (max-width:1024px) {
 
-    h1{
+    h1 {
         max-width: 250px;
         font-size: 28px;
         line-height: 129%;
         margin: 1rem auto;
     }
+
     p {
         max-width: 330px;
         margin: 0 auto;
@@ -247,7 +249,7 @@ form {
         line-height: 162%
     }
 
-   
+
 
     .form {
         padding: 24px;

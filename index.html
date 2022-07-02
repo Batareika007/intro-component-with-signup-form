@@ -49,7 +49,7 @@
 
       <div class="form">
 
-        <form action="#" method="get" id="main-form">
+        <form action="/" method="get" id="main-form" onsubmit="return validateForm();" novalidate>
 
           <div class="form__inp error__sign">
             <input type="text" name="First_Name" id="form-fname" placeholder="First Name" required>
@@ -72,6 +72,8 @@
             <!-- <div class="form__error-icon flex-center">!</div> -->
             <div class="form__error-text">Password cannot be empty</div>
           </div>
+
+          <!-- submit form -->
           <div class="form__inp">
             <button type="submit">Claim your free trial</button>
           </div>
