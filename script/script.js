@@ -13,62 +13,81 @@ const fpass = document.querySelector('#form-password');
 
 // add error sigh for every line
 
-inputInner.forEach(error => {
-  error.classList.remove('error__sign');
-});
+// inputInner.forEach(error => {
+//   error.classList.remove('error__sign');
+// });
 
 errorText.forEach(error => {
   error.innerHTML = '';
 });
-// form name
-fname.addEventListener("input", function (event) {
+
+
+const validateForm = () => {
+  if (!validateName()) {
+    return false
+  } else if (!validateLastName()) {
+    return false
+  } else if (!validateEmail()) {
+    return false
+  } else if (!validatePass()) {
+    return false
+  }
+  // return false
+  // return true
+  // if (fname.value === '') {
+  //   inputInner[0].classList.add('error__sign');
+  //   errorText[0].innerHTML = 'First name cannot be empty'
+  //   return false
+  // } else {
+  //   inputInner[0].classList.remove('error__sign');
+  //   errorText[0].innerHTML = ''
+  //   return true
+  // }
+
+}
+
+const validateName = () => {
   if (fname.value === '') {
-    fname.setCustomValidity("First name cannot be empty");
-    fname.reportValidity("");
-  } else {
-    fname.setCustomValidity("");
+    inputInner[0].classList.add('error__sign');
+    errorText[0].innerHTML = 'First name cannot be empty';
+    return false;
   }
-});
-// form last name
-lname.addEventListener("input", function (event) {
-  if (lname.validity.typeMismatch) {
-    lname.setCustomValidity("Last name cannot be empty");
-    lname.reportValidity();
+  // else {
+  inputInner[0].classList.remove('error__sign');
+  errorText[0].innerHTML = '';
+  return true;
+  // }
+}
+const validateLastName = () => {
+  if (lname.value === '') {
+    inputInner[1].classList.add('error__sign');
+    errorText[1].innerHTML = 'Last name cannot be empty';
+    return false;
   } else {
-    lname.setCustomValidity("");
+    inputInner[1].classList.remove('error__sign');
+    errorText[1].innerHTML = '';
+    return true;
   }
-});
-// form email
-femail.addEventListener("input", function (event) {
-  if (femail.validity.typeMismatch) {
-    femail.setCustomValidity("Looks like it not an email");
-    femail.reportValidity();
+}
+const validateEmail = () => {
+  if (femail.value === '') {
+    inputInner[2].classList.add('error__sign', 'red_clr');
+    errorText[2].innerHTML = 'Looks like it not an email';
+    return false;
   } else {
-    femail.setCustomValidity("");
+    inputInner[2].classList.remove('error__sign', 'red_clr');
+    errorText[2].innerHTML = '';
+    return true;
   }
-});
-// form password
-fpass.addEventListener("input", function (event) {
-  if (fpass.validity.typeMismatch) {
-    fpass.setCustomValidity("Password cannot be empty");
-    fpass.reportValidity();
+}
+const validatePass = () => {
+  if (fpass.value === '') {
+    inputInner[3].classList.add('error__sign');
+    errorText[3].innerHTML = 'Password cannot be empty';
+    return false;
   } else {
-    fpass.setCustomValidity("");
+    inputInner[3].classList.remove('error__sign');
+    errorText[3].innerHTML = '';
+    return true;
   }
-});
-
-
-// if (fname === null) {
-//   document.querySelector('.form__error-text').innerHTML = 'Enter Name'
-//   // inputInner.classList.add('error__sign');
-// }
-
-// if (lname === null){
-//     document.querySelector('.form__error-text').innerHTML = 'Enter Last Name'
-// }
-// if (femail === null){
-//     document.querySelector('.form__error-text').innerHTML = 'Enter Email'
-// }
-// if (fpass === null){
-//     document.querySelector('.form__error-text').innerHTML = 'Enter Password'
-// }
+}

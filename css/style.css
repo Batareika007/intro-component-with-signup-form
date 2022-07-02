@@ -562,6 +562,10 @@ form button:active {
   margin-bottom: 20px;
 }
 
+.red_clr input {
+  color: hsl(0deg, 100%, 74%);
+}
+
 .error__sign {
   position: relative;
 }
@@ -587,6 +591,9 @@ form button:active {
   border-radius: 50%;
   top: 20px;
   right: 20px;
+}
+.error__sign .red_clr {
+  color: hsl(0deg, 100%, 74%);
 }
 
 .form__error-text {

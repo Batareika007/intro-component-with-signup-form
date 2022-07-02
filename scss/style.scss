@@ -196,11 +196,17 @@ form {
 
 }
 
+.red_clr input {
+    color: $red_clr;
+}
+
 .error__sign {
     position: relative;
 
+
     input {
         border: solid 2px $red_clr;
+
     }
 
     &:after {
@@ -216,6 +222,10 @@ form {
         border-radius: 50%;
         top: 20px;
         right: 20px;
+    }
+
+    .red_clr {
+        color: $red_clr;
     }
 }
 

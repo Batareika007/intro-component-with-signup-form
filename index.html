@@ -51,24 +51,25 @@
 
         <form action="/" method="get" id="main-form" onsubmit="return validateForm();" novalidate>
 
-          <div class="form__inp error__sign">
+          <div class="form__inp">
             <input type="text" name="First_Name" id="form-fname" placeholder="First Name" required>
             <!-- <div class="form__error-icon flex-center">!</div> -->
             <div class="form__error-text">First name cannot be empty</div>
           </div>
 
-          <div class="form__inp error__sign">
+          <div class="form__inp">
             <input type="text" name="Last_Name" id="form-lname" placeholder="Last Name" required>
             <!-- <div class="form__error-icon flex-center">!</div> -->
             <div class="form__error-text">Last name cannot be empty</div>
           </div>
-          <div class="form__inp error__sign">
+          <div class="form__inp">
             <input type="email" name="Email" id="form-email" placeholder="Email Address" required>
             <!-- <div class="form__error-icon flex-center">!</div> -->
             <div class="form__error-text">Looks like it not an email</div>
           </div>
-          <div class="form__inp error__sign">
-            <input type="password" name="Password" id="form-password" placeholder="Password" required>
+          <div class="form__inp">
+            <input type="password" name="Password" id="form-password" autocomplete="adutocomplete"
+              placeholder="Password" required>
             <!-- <div class="form__error-icon flex-center">!</div> -->
             <div class="form__error-text">Password cannot be empty</div>
           </div>
