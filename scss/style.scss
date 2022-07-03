@@ -55,17 +55,19 @@ body {
 .container {
     max-width: 1440px;
     width: 100%;
-    margin: 2vw auto;
+    margin: 0 auto;
     padding: 0 24px;
-    min-height: 90vh;
+    height: 100%;
 }
 
 main {
+    min-height: 95vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem
+    gap: 2rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -274,12 +276,8 @@ form {
         }
     }
 
+    main {
+        margin-bottom: 1rem;
+    }
+
 }
-
-@media screen and (max-width:768px) {}
-
-@media screen and (max-width:425px) {}
-
-@media screen and (max-width:375px) {}
-
-@media screen and (max-width:320px) {}

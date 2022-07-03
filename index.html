@@ -27,73 +27,77 @@
 </head>
 
 <body>
-  <main class="container">
-    <section>
+  <div class="container">
 
-      <h1>
-        Learn to code by watching others
-      </h1>
-      <p>
 
-        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-        but understanding how developers think is invaluable.
-      </p>
-    </section>
+    <main>
+      <section>
 
-    <section>
-      <h2 class="blue__header">
+        <h1>
+          Learn to code by watching others
+        </h1>
+        <p>
 
-        <strong>Try it free 7 days</strong>
-        then $20/mo. thereafter
-      </h2>
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.
+        </p>
+      </section>
 
-      <div class="form">
+      <section>
+        <h2 class="blue__header">
 
-        <form action="/" method="get" id="main-form" onsubmit="return validateForm();" novalidate>
+          <strong>Try it free 7 days</strong>
+          then $20/mo. thereafter
+        </h2>
 
-          <div class="form__inp">
-            <input type="text" name="First_Name" id="form-fname" placeholder="First Name" required>
-            <!-- <div class="form__error-icon flex-center">!</div> -->
-            <div class="form__error-text">First name cannot be empty</div>
+        <div class="form">
+
+          <form action="" method="get" id="main-form" onsubmit="return validateForm();" novalidate>
+
+            <div class="form__inp">
+              <input type="text" name="First_Name" id="form-fname" placeholder="First Name" required>
+              <!-- <div class="form__error-icon flex-center">!</div> -->
+              <div class="form__error-text">First name cannot be empty</div>
+            </div>
+
+            <div class="form__inp">
+              <input type="text" name="Last_Name" id="form-lname" placeholder="Last Name" required>
+              <!-- <div class="form__error-icon flex-center">!</div> -->
+              <div class="form__error-text">Last name cannot be empty</div>
+            </div>
+            <div class="form__inp">
+              <input type="email" name="Email" id="form-email" placeholder="Email Address" required>
+              <!-- <div class="form__error-icon flex-center">!</div> -->
+              <div class="form__error-text">Looks like it not an email</div>
+            </div>
+            <div class="form__inp">
+              <input type="password" name="Password" id="form-password" autocomplete="adutocomplete"
+                placeholder="Password" required>
+              <!-- <div class="form__error-icon flex-center">!</div> -->
+              <div class="form__error-text">Password cannot be empty</div>
+            </div>
+
+            <!-- submit form -->
+            <div class="form__inp">
+              <button type="submit">Claim your free trial</button>
+            </div>
+          </form>
+
+          <div class="form__footer">
+            By clicking the button, you are agreeing to our <a href="#" class="red_color"> Terms and Services</a>
+            </span>
           </div>
-
-          <div class="form__inp">
-            <input type="text" name="Last_Name" id="form-lname" placeholder="Last Name" required>
-            <!-- <div class="form__error-icon flex-center">!</div> -->
-            <div class="form__error-text">Last name cannot be empty</div>
-          </div>
-          <div class="form__inp">
-            <input type="email" name="Email" id="form-email" placeholder="Email Address" required>
-            <!-- <div class="form__error-icon flex-center">!</div> -->
-            <div class="form__error-text">Looks like it not an email</div>
-          </div>
-          <div class="form__inp">
-            <input type="password" name="Password" id="form-password" autocomplete="adutocomplete"
-              placeholder="Password" required>
-            <!-- <div class="form__error-icon flex-center">!</div> -->
-            <div class="form__error-text">Password cannot be empty</div>
-          </div>
-
-          <!-- submit form -->
-          <div class="form__inp">
-            <button type="submit">Claim your free trial</button>
-          </div>
-        </form>
-
-        <div class="form__footer">
-          By clicking the button, you are agreeing to our <a href="#" class="red_color"> Terms and Services</a>
-          </span>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.frontendmentor.io/profile/Batareika007" target="_blank">Alexei</a>.
-    </p>
-  </footer>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/Batareika007" target="_blank">Alexei</a>.
+      </p>
+    </footer>
+  </div>
   <script src="script/script.js"></script>
 </body>
 

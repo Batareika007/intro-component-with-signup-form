@@ -418,12 +418,13 @@ body {
 .container {
   max-width: 1440px;
   width: 100%;
-  margin: 2vw auto;
+  margin: 0 auto;
   padding: 0 24px;
-  min-height: 90vh;
+  height: 100%;
 }
 
 main {
+  min-height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,6 +437,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 section {
@@ -632,5 +634,9 @@ form button:active {
     text-align: center;
     font-size: 0.7rem;
     line-height: 160%;
+  }
+
+  main {
+    margin-bottom: 1rem;
   }
 }

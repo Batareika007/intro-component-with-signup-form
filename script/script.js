@@ -17,14 +17,22 @@ errorText.forEach(error => {
 
 
 const validateForm = () => {
-  validateName();
-  validateLastName();
-  validateEmail();
-  validatePass();
-  return false
+
+  while (!validateAll()) {
+    return false
+  }
 }
 
 
+const validateAll = () => {
+
+  let name = validateName();
+  let lname = validateLastName();
+  let email = validateEmail();
+  let pass = validatePass();
+
+  return (name && lname && email && pass)
+}
 
 const validateName = () => {
   if (fname.value === '') {
@@ -38,7 +46,6 @@ const validateName = () => {
     return true;
   }
 }
-
 
 const validateLastName = () => {
   if (lname.value === '') {
