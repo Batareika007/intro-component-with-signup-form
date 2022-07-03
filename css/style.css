@@ -407,6 +407,7 @@ body {
   color: white;
   background-color: hsl(0deg, 100%, 74%);
   background-image: url(../images/bg-intro-desktop.png);
+  background-attachment: fixed;
 }
 
 .wrapper {

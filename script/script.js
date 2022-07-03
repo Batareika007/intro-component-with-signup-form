@@ -24,18 +24,19 @@ const validateForm = () => {
   return false
 }
 
+
+
 const validateName = () => {
   if (fname.value === '') {
     inputInner[0].classList.add('error__sign');
     errorText[0].innerHTML = 'First name cannot be empty';
     fname.setCustomValidity = "";
     return false;
+  } else {
+    inputInner[0].classList.remove('error__sign');
+    errorText[0].innerHTML = '';
+    return true;
   }
-  // else {
-  inputInner[0].classList.remove('error__sign');
-  errorText[0].innerHTML = '';
-  return true;
-  // }
 }
 
 
@@ -51,10 +52,9 @@ const validateLastName = () => {
   }
 }
 
-
 const validateEmail = () => {
 
-  const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const emailRegExp = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 
   if (femail.value === '') {
     inputInner[2].classList.add('error__sign', 'red_clr');
@@ -70,7 +70,6 @@ const validateEmail = () => {
     return true;
   }
 }
-
 
 const validatePass = () => {
   if (fpass.value === '') {
