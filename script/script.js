@@ -11,45 +11,24 @@ const femail = document.querySelector('#form-email');
 // form password
 const fpass = document.querySelector('#form-password');
 
-// add error sigh for every line
-
-// inputInner.forEach(error => {
-//   error.classList.remove('error__sign');
-// });
-
 errorText.forEach(error => {
   error.innerHTML = '';
 });
 
 
 const validateForm = () => {
-  if (!validateName()) {
-    return false
-  } else if (!validateLastName()) {
-    return false
-  } else if (!validateEmail()) {
-    return false
-  } else if (!validatePass()) {
-    return false
-  }
-  // return false
-  // return true
-  // if (fname.value === '') {
-  //   inputInner[0].classList.add('error__sign');
-  //   errorText[0].innerHTML = 'First name cannot be empty'
-  //   return false
-  // } else {
-  //   inputInner[0].classList.remove('error__sign');
-  //   errorText[0].innerHTML = ''
-  //   return true
-  // }
-
+  validateName();
+  validateLastName();
+  validateEmail();
+  validatePass();
+  return false
 }
 
 const validateName = () => {
   if (fname.value === '') {
     inputInner[0].classList.add('error__sign');
     errorText[0].innerHTML = 'First name cannot be empty';
+    fname.setCustomValidity = "";
     return false;
   }
   // else {
@@ -58,6 +37,8 @@ const validateName = () => {
   return true;
   // }
 }
+
+
 const validateLastName = () => {
   if (lname.value === '') {
     inputInner[1].classList.add('error__sign');
@@ -69,8 +50,13 @@ const validateLastName = () => {
     return true;
   }
 }
+
+
 const validateEmail = () => {
-  if (femail.value === '') {
+
+  const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  if (femail.value === '' || !emailRegExp.test(femail.value)) {
     inputInner[2].classList.add('error__sign', 'red_clr');
     errorText[2].innerHTML = 'Looks like it not an email';
     return false;
@@ -80,6 +66,8 @@ const validateEmail = () => {
     return true;
   }
 }
+
+
 const validatePass = () => {
   if (fpass.value === '') {
     inputInner[3].classList.add('error__sign');
