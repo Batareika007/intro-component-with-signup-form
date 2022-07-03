@@ -56,7 +56,11 @@ const validateEmail = () => {
 
   const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  if (femail.value === '' || !emailRegExp.test(femail.value)) {
+  if (femail.value === '') {
+    inputInner[2].classList.add('error__sign', 'red_clr');
+    errorText[2].innerHTML = 'Email cannot be empty';
+    return false;
+  } else if (!emailRegExp.test(femail.value)) {
     inputInner[2].classList.add('error__sign', 'red_clr');
     errorText[2].innerHTML = 'Looks like it not an email';
     return false;
